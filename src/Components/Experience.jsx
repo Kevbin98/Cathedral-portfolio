@@ -1,15 +1,15 @@
 import React from "react";
 import * as THREE from "three";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
+import { Cathedral } from "./Cathedral";
 
 const Experience = () => {
   return (
     <>
+      {/* <ambientLight intensity={2} color='#D8A35E' /> */}
       <OrbitControls />
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshNormalMaterial />
-      </mesh>
+      <Cathedral />
+      <Environment files='/hdri/sunset.exr' background={true} />
     </>
   );
 };
