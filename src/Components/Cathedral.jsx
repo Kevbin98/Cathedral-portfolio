@@ -3,7 +3,7 @@ import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 export function Cathedral(props) {
-  const { nodes, materials } = useGLTF("models/cathedralTransforms.glb");
+  const { nodes, materials } = useGLTF("/models/cathedralTransforms.glb");
 
   //materials
   const stainedGlassMaterial = materials["baked stained glass"];
@@ -152,4 +152,4 @@ export function Cathedral(props) {
   );
 }
 
-useGLTF.preload("models/cathedralTransforms.glb");
+useGLTF.preload("/models/cathedralTransforms.glb");
