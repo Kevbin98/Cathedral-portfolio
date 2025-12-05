@@ -6,9 +6,11 @@ import LoadingLogo from "/textures/Loading.png";
 import styled from "styled-components";
 import { motion, AnimatePresence, scale } from "framer-motion";
 import Button from "../Components/Button";
+import { useAudio } from "../Context/AudioProvider";
 
-const LoadingScreen = ({}) => {
+const LoadingScreen = ({ closeLoader }) => {
   const { progress } = useProgress();
+  const { playAudio, pauseAudio, isPlaying } = useAudio();
 
   const isComplete = progress >= 100;
 
@@ -34,7 +36,15 @@ const LoadingScreen = ({}) => {
           </Percentage>
         )}
 
-        {isComplete && <Button text={"Enter"} />}
+        {isComplete && (
+          <Button
+            text={"Enter"}
+            onClick={() => {
+              playAudio();
+              closeLoader();
+            }}
+          />
+        )}
 
         {!isComplete && (
           <Icon

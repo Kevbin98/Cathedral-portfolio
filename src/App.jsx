@@ -29,6 +29,8 @@ import { SwordLoader } from "./Layout/SwordLoader";
 import LoadingScreen from "./Layout/LoadingScreen";
 
 function App() {
+  const [showLoader, setShowLoader] = useState(true);
+
   return (
     <>
       <Canvas
@@ -61,7 +63,7 @@ function App() {
         {/* <SwordLoader /> */}
         <ambientLight intensity={1} />
       </Canvas>
-      <LoadingScreen />
+      {showLoader && <LoadingScreen closeLoader={() => setShowLoader(false)} />}
     </>
   );
 }
