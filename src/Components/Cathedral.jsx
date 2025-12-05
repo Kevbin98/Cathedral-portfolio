@@ -13,8 +13,8 @@ export function Cathedral(props) {
   const aoTexture = useTexture("/textures/ornateAO.png");
 
   useEffect(() => {
-    materials.god.emissiveIntensity = 1;
-    materials.god.emissive = new THREE.Color("#FFFFF");
+    materials.god.emissiveIntensity = 1.2;
+    materials.god.emissive = new THREE.Color("#FFFFFF");
     materials.god.opacity = 0.5;
 
     stainedGlassMaterial.emissiveIntensity = 0.5;

@@ -7,10 +7,10 @@ const DustParticles = ({ count = 10000 }) => {
 
   const texture = useLoader(THREE.TextureLoader, "/textures/dust.png");
   texture.encoding = THREE.sRGBEncoding;
-  texture.transparent = false;
+  texture.transparent = true;
   texture.premultiplyAlpha = false;
   texture.needsUpdate = true;
-  texture.toneMapped = false;
+  texture.toneMapped = true;
 
   // Generate random positions once
   const positions = useMemo(() => {

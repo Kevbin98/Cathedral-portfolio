@@ -26,6 +26,7 @@ import {
 import "./App.css";
 import * as THREE from "three";
 import { SwordLoader } from "./Layout/SwordLoader";
+import LoadingScreen from "./Layout/LoadingScreen";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
         }}
         shadows
       >
-        <Suspense fallback={<SwordLoader />}>
+        <Suspense fallback={null}>
           <Experience />
           <EffectComposer>
             <Bloom
@@ -55,15 +56,12 @@ function App() {
             />
             <Vignette eskil={false} offset={0.2} darkness={0.7} />
             <ToneMapping mode={ToneMappingMode.ACES_FILMIC} resolution={256} />
-            {/* <Noise
-              premultiply // enables or disables noise premultiplication
-              blendFunction={BlendFunction.ADD} // blend mode
-            /> */}
           </EffectComposer>
         </Suspense>
         {/* <SwordLoader /> */}
         <ambientLight intensity={1} />
       </Canvas>
+      <LoadingScreen />
     </>
   );
 }
