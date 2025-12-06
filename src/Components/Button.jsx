@@ -33,7 +33,7 @@ const Button = ({ text, onClick }) => {
         fontFamily: '"Cinzel", serif',
         fontSize: "1.1rem",
         letterSpacing: "1px",
-        // cursor: "pointer",
+        cursor: "none",
         textShadow: "0 0 10px #f6d77a",
         transition: "all 0.1s ease",
       }}

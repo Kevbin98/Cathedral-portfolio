@@ -85,7 +85,7 @@ const Main = styled(motion.div)`
   border-bottom: 6px solid gold;
   color: white;
   font-size: 2rem;
-  z-index: 9999999;
+
   overflow: hidden;
   display: flex;
   flex-direction: column;

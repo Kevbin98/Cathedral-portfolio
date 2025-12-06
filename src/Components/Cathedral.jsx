@@ -8,18 +8,27 @@ export function Cathedral(props) {
   //materials
   const stainedGlassMaterial = materials["baked stained glass"];
   const ornateMaterial = materials["Worn white marble.001"];
+  const tiles = materials["Antique Cement Tiles checker"];
+  const concrete = materials["Limestone concerete gray"];
+  const marble = materials["Worn white marble"];
 
   //ambient occlusion texture for ornate materials
   const aoTexture = useTexture("/textures/ornateAO.png");
 
   useEffect(() => {
-    materials.god.emissiveIntensity = 1.2;
+    materials.god.emissiveIntensity = 3;
     materials.god.emissive = new THREE.Color("#FFFFFF");
+    materials.Limestone.emissiveIntensity = 5;
     materials.god.opacity = 0.5;
-
-    stainedGlassMaterial.emissiveIntensity = 0.5;
+    concrete.emissiveIntensity = 5;
+    tiles.emissiveIntensity = 5;
+    stainedGlassMaterial.emissiveIntensity = 2;
     ornateMaterial.roughness = 1;
     ornateMaterial.normalScale = new THREE.Vector2(1, 1);
+    ornateMaterial.emissiveIntensity = 0.1;
+    ornateMaterial.emissive = new THREE.Color("#FFFFFF");
+    marble.emissive = new THREE.Color("#FFFFFF");
+    marble.emissiveIntensity = 0.1;
   });
 
   return (

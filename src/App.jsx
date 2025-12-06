@@ -27,6 +27,7 @@ import "./App.css";
 import * as THREE from "three";
 import { SwordLoader } from "./Layout/SwordLoader";
 import LoadingScreen from "./Layout/LoadingScreen";
+import CustomCursor from "./Components/CustomCursor";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -64,6 +65,7 @@ function App() {
         <ambientLight intensity={1} />
       </Canvas>
       {showLoader && <LoadingScreen closeLoader={() => setShowLoader(false)} />}
+      <CustomCursor />
     </>
   );
 }
