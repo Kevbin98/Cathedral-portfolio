@@ -26,6 +26,7 @@ const Button = ({ text, onClick }) => {
       style={{
         marginTop: 30,
         padding: "12px 28px",
+        height: "60px",
         background: "none",
         border: "2px solid #f4e3a1",
         borderRadius: 8,
@@ -33,7 +34,7 @@ const Button = ({ text, onClick }) => {
         fontFamily: '"Cinzel", serif',
         fontSize: "1.1rem",
         letterSpacing: "1px",
-        cursor: "none",
+        // cursor: "none",
         textShadow: "0 0 10px #f6d77a",
         transition: "all 0.1s ease",
       }}

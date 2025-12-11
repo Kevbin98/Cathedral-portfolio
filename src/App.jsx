@@ -28,6 +28,7 @@ import * as THREE from "three";
 import { SwordLoader } from "./Layout/SwordLoader";
 import LoadingScreen from "./Layout/LoadingScreen";
 import CustomCursor from "./Components/CustomCursor";
+import Nav from "./Layout/Nav";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -35,7 +36,7 @@ function App() {
   return (
     <>
       <Canvas
-        camera={{ fov: 50 }}
+        camera={{ fov: 50, position: [3.26, 10.97, 46.97] }}
         gl={{
           antialias: true,
 
@@ -65,7 +66,8 @@ function App() {
         <ambientLight intensity={1} />
       </Canvas>
       {showLoader && <LoadingScreen closeLoader={() => setShowLoader(false)} />}
-      <CustomCursor />
+      {/* <CustomCursor /> */}
+      <Nav />
     </>
   );
 }

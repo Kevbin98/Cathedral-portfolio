@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Cursor from "/textures/cursor.svg";
-import { motion, AnimatePresence, scale } from "framer-motion";
-import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -24,7 +23,6 @@ const CustomCursor = () => {
     };
   }, []);
 
-  //   console.log(mousePosition);
   return (
     <motion.div
       style={{
@@ -34,7 +32,7 @@ const CustomCursor = () => {
         width: "40px",
         height: "40px",
         pointerEvents: "none",
-        transform: "translate(-50%, -50%)", // center the cursor image
+        transform: "translate(-50%, -50%)",
         backgroundImage: `url(${Cursor})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",

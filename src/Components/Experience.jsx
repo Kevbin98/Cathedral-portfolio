@@ -5,6 +5,7 @@ import { useThree } from "@react-three/fiber";
 import CameraDebug from "./CameraDebug";
 import { Cathedral } from "./Cathedral";
 import DustParticles from "./DustParticles";
+import Menu from "../Layout/Menu";
 // import { Perf } from "r3f-perf";
 
 const Experience = () => {
@@ -17,6 +18,7 @@ const Experience = () => {
       <DustParticles />
       <Environment files='/hdri/sunset.exr' background={true} />
       {/* <CameraDebug /> */}
+      {/* <Menu /> */}
     </>
   );
 };

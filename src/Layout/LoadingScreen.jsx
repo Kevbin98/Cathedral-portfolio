@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Loader, useProgress } from "@react-three/drei";
 import IconLogo from "/textures/icon.png";
-import LoadingLogo from "/textures/Loading.png";
+import LoadingLogo from "/textures/Loader.svg";
 import styled from "styled-components";
 import { motion, AnimatePresence, scale } from "framer-motion";
 import Button from "../Components/Button";
@@ -18,7 +18,7 @@ const LoadingScreen = ({ closeLoader }) => {
     <AnimatePresence>
       <Main
         key='loading-text'
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 1, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -91,6 +91,7 @@ const Main = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 `;
 
 const Percentage = styled(motion.p)`
