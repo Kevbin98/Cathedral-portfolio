@@ -5,6 +5,8 @@
   height: 100vh;
   background: black;
   overflow: hidden;
+  color: #e8d9a8;
+  font-family: "Cinzel", serif;
 }
 button {
   /* padding: 10px 22px; */

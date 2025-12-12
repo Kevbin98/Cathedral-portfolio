@@ -94,14 +94,12 @@ const TabsContainer = styled(motion.div)`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   /* width: 500px;
   height: 500px; */
   width: 50vw;
   height: 70vh;
-
   border-radius: 10px;
-  background: rgba(20, 15, 10, 0.35);
+  background-color: rgba(20, 15, 10, 0.35);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(200, 185, 120, 0.4);
   color: #e8d9a8;
@@ -109,7 +107,6 @@ const TabsContainer = styled(motion.div)`
   letter-spacing: 1px;
   padding: 16px 20px;
   z-index: 9998;
-
   /* MOBILE FIX */
   @media (max-width: 600px) {
     padding: 12px 14px;

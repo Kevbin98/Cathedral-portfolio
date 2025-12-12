@@ -29,9 +29,12 @@ import { SwordLoader } from "./Layout/SwordLoader";
 import LoadingScreen from "./Layout/LoadingScreen";
 import CustomCursor from "./Components/CustomCursor";
 import Nav from "./Layout/Nav";
+import Positions from "./Layout/Positions";
+import CameraController from "./Components/CameraController";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
+  const [cameraTarget, setCameraTarget] = useState();
 
   return (
     <>
@@ -64,10 +67,12 @@ function App() {
         </Suspense>
         {/* <SwordLoader /> */}
         <ambientLight intensity={1} />
+        <CameraController target={cameraTarget} />
       </Canvas>
       {showLoader && <LoadingScreen closeLoader={() => setShowLoader(false)} />}
       {/* <CustomCursor /> */}
       <Nav />
+      <Positions setTarget={setCameraTarget} />
     </>
   );
 }

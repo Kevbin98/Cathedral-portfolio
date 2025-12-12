@@ -27,7 +27,7 @@ const DustParticles = ({ count = 10000 }) => {
   useFrame((state, delta) => {
     const positions = points.current.geometry.attributes.position.array;
     for (let i = 0; i < count; i++) {
-      positions[i * 3 + 1] -= delta * 0.2; // Slowly fall
+      positions[i * 3 + 1] -= delta / 15; // Slowly fall
       if (positions[i * 3 + 1] < 0) positions[i * 3 + 1] = 15; // Reset height
     }
     points.current.geometry.attributes.position.needsUpdate = true;
