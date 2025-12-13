@@ -13,6 +13,16 @@ const CameraController = ({ target }) => {
   useEffect(() => {
     if (target === "position1") {
       gsap.to(camera.position, {
+        x: 3.26,
+        y: 10.97,
+        z: 46.97,
+        duration: 1.6,
+        ease: "power3.inOut",
+      });
+    }
+
+    if (target === "position2") {
+      gsap.to(camera.position, {
         x: -18.97,
         y: 27.43,
         z: 54.02,
@@ -21,7 +31,7 @@ const CameraController = ({ target }) => {
       });
     }
 
-    if (target === "position2") {
+    if (target === "position3") {
       gsap.to(camera.position, {
         x: 4.63,
         y: 13.41,
@@ -31,10 +41,10 @@ const CameraController = ({ target }) => {
       });
     }
 
-    if (target === "position3") {
+    if (target === "position4") {
       gsap.to(camera.position, {
         x: 4.69,
-        y: 10.14,
+        y: 15,
         z: 20.31,
         duration: 1.6,
         ease: "power3.inOut",
@@ -43,7 +53,7 @@ const CameraController = ({ target }) => {
   }, [target]);
 
   useFrame(() => {
-    camera.lookAt(0, 5, 0);
+    camera.lookAt(5, 10, 0);
   });
 
   return null;

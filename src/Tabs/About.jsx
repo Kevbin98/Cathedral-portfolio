@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
 import Water from "../assets/WaterVisualizer.png";
 
-const Projects = () => {
+const About = () => {
   return (
     <Main>
-      <h1>Projects</h1>
+      <h1>About</h1>
     </Main>
   );
 };
@@ -27,4 +27,4 @@ const Main = styled(motion.div)`
   background-repeat: no-repeat; */
 `;
 
-export default Projects;
+export default About;

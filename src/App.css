@@ -14,7 +14,7 @@ button {
   border-radius: 6px;
   min-width: 80px; /* keeps consistent minimum size */
   max-width: 100%; /* prevents overflowing container */
-  height: 25px;
+  /* height: 25px; */
   white-space: nowrap;
   overflow: visible;
 
@@ -36,4 +36,20 @@ button {
 
   cursor: pointer;
   transition: all 0.25s ease;
+}
+
+.ui-button {
+  background: none;
+  border: none;
+  font-family: "Cinzel", serif;
+  color: #e8d9a8;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+
+  text-shadow: 0 0 4px rgba(190, 160, 70, 0.35);
+}
+
+.ui-button:hover {
+  color: #fff1c2;
 }

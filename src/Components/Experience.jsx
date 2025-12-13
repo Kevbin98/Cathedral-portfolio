@@ -12,7 +12,7 @@ const Experience = () => {
     <>
       {/* <ambientLight intensity={2} color='#D8A35E' /> */}
       {/* <Perf position='top-left' /> */}
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <Cathedral />
       <DustParticles />
       <Environment files='/hdri/sunset.exr' background={true} />
